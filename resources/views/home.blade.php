@@ -1,42 +1,23 @@
 @extends('layouts.app')
 @section('content')
-    <style>
-        #subImagem {
-            width: 23%;
-            position: absolute;
-            margin-top: 25%;
-            margin-left: 40%;
-        }
-
-        @media only screen and (max-width: 600px) {
-            #subImagem {
-                width: 40%;
-                margin-left: 30%;
-                margin-top: 20%;
-            }
-        }
-        #containerPai{
-            margin-bottom: 10%;
-        }
-        @media only screen and (max-width: 600px) {
-            #containerPai {
-                margin-bottom: 30%;
-            }
-        }
-    </style>
-    <div class="container mt-3" id="containerPai">
-        <div class="card">
-            <img src="{{ asset('imgs/foto_capa.jpg') }}" class="card-img" alt="imagem capa">
-            <div class="card-img-overlay" id="subImagem">
-                <img src="{{ asset('imgs/foto_sub_capa.jpg') }}" width="100px" class="card-img" alt="imagem sub capa">
-
-            </div>
+    <div class="row d-flex justify-content-center" style="text-align: center;">
+        <h2 class="fw-bold">Restaurante de teste</h2>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <span class="mr-3 fst-italic" style="font-size: 16px;"><i class="bi bi-check-lg mx-1"  style="font-size: 18px;color:green"></i>Retire na loja</span>
+            <span class="mx-3 fst-italic" style="font-size: 16px;"><i class="bi bi-check-lg mx-1" style="font-size: 18px;color:green"></i>Delivery</span>
         </div>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="d-grid gap-2 col-4 mx-auto">
-            <button class="btn btn-dark" type="button">WhatsApp</button>
-            <button class="btn btn-dark" type="button">Cardápio</button>
-          </div>
+
+    <div class="row d-flex justify-content-center m-2">
+        <a class="btn btn-dark fw-bold fs-5 col-md-6" href="{{ route('cardapio.index') }}" type="button">Cardápio</a>
+    </div>
+    <div class="row d-flex justify-content-center m-2">
+        <button class="btn btn-dark fw-bold fs-5 mt-2 col-md-6" type="button">WhatsApp</button>
+    </div>
+
+    <div class="row mt-3" style="text-align: center;">
+        <h6 class="fst-normal"><i class="bi bi-geo-alt" style="color:green"></i> R. Oswaldo Cruz, 886-972 - Kennedy, Itaperuna - RJ, 28300-000, Brasil</h6>
     </div>
 @endsection
